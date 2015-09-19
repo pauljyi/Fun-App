@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link href="css/main.css" rel="stylesheet" type="text/css"/>
+  <script language="javascript" type="text/javascript" src="js/jquery-2.1.4.js"></script>
+  <script language="javascript" type="text/javascript" src="js/main1.js"></script>
+  <script language="javascript" type="text/javascript" src="js/main2.js"></script>
+  
+
+
+  <audio controls>
+    <source src="sounds/pop.mp3" type="audio/mp3">
+  </audio>
+
+</head>
+<body id="body">
+  <div id="form">
+    <form name="frmOne" action="" method="post">
+      <h1 id="header">Cool Sh! t</h1>
+      <div class="text">
+        <input type="text" id="textBox" placeholder="Enter New Header"></input>
+        <input class="button" type="button" id="submitButton" value="Submit" onclick="updateHeader()"/>
+      </div>
+
+      <div class="colors">
+        <input type="radio" value="red" name="choice" >Red</input>
+        <input type="radio" value="green" name="choice" checked>Green</input>
+        <input type="radio" value="blue" name="choice">Blue</input>
+      </div>
+
+      <div class="buttons">
+        <input class="button" type="button" id="random" value="Randomizer" onclick="randomizer()"/>
+        <input class="button" type="button" id="bubblesheet" value="Surpise!"/>
+        <input class="button" type="button" id="game" value="Game" onclick="location.href='game.html'"/>
+      </div>
+
+      <!-- Progress Bar -->
+      <!-- <div id="progressBar"></div> -->
+    </form>
+  </div>
+
+  <table>
+    <tr id="bubbles1">
+    </tr>
+
+    <tr id="bubbles2">
+    </tr>
+
+    <tr id="bubbles3">
+    </tr>
+
+    <tr id="bubbles4">
+    </tr>
+  </table>
+
+
+
+</body>
+</html>
