@@ -4,6 +4,10 @@ $("#sortable").disableSelection();
 
 countTodos();
 
+$(document).click(function(){
+$('input[name="textInput"]').focus();
+});
+
 // all done btn
 $("#checkAll").click(function(){
     AllDone();
@@ -45,8 +49,9 @@ function countTodos(){
 
 //create task
 function createTodo(text){
-    var value = $('[name="choice"]:checked').val();
-    var markup = '<li class="ui-state-default"><div class="checkbox"   style="background-color:' + value +'"><label><input type="checkbox" value=""/>'+ text +'</label></div></li>';
+    var section = $('[name="section"]:checked').val();
+    var color = $('[name="color"]:checked').val();
+    var markup = '<li class="ui-state-default"><div class="checkbox"   style="background-color:' + color +'"><label><span class="'+section+'" style="padding-right:15px"></span><input style="visibility:hidden" type="checkbox" value=""/>'+ text +'</label></div></li>';
     $('#sortable').append(markup);
     $('.add-todo').val('');
 }
@@ -81,4 +86,6 @@ function AllDone(){
 function removeItem(element){
     $(element).parent().remove();
 }
+
+
 });

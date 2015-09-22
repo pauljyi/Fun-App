@@ -3,88 +3,77 @@
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
-  <!-- <link href="js/jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet" type="text/css"> -->
   <link href="css/todo.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/todo.js"></script>
 
+
+
+
 </head>
 <body>
-  <h2>To Do List</h2>
 
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <div class="todolist not-done">
-             <h1>Todos</h1>
-             
-              <!-- <form>
-               <div id="radioset" class="ui-buttonset">
-                 <input type="radio" id="radio1" name="radio" class="ui-helper-hidden-accessible">
-                   <label for="radio1" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left ui-state-active" role="button" aria-pressed="true">
-                     <span class="ui-button-text">Choice 1</span>
-                   </label>
-                 <input type="radio" id="radio2" name="radio" checked="checked" class="ui-helper-hidden-accessible">
-                   <label for="radio2" class="ui-button ui-widget ui-state-default ui-button-text-only" role="button" aria-pressed="false">
-                     <span class="ui-button-text">Choice 2</span>
-                   </label>
-                 <input type="radio" id="radio3" name="radio" class="ui-helper-hidden-accessible">
-                   <label for="radio3" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-pressed="false">
-                     <span class="ui-button-text">Choice 3</span>
-                   </label>
-               </div>
-            </form> -->
+      <div class="col-md-6">
+        <div class="todolist not-done">
+          <h1>To Do List</h1>
 
-
-             <div class="colors">
-               <input type="radio"  value="rgb(209, 51, 51)" name="choice" >Urgent</input>
-               <input type="radio"  value="rgba(235, 233, 68, 0.95)" name="choice">Later</input>
-               <input type="radio"  value="" name="choice">Normal</input>
-             </div>
-
-                <input type="text" class="form-control add-todo" placeholder="Add todo">
-                    <button id="checkAll" class="btn btn-success">Mark all as done</button>
-
-
-                    <hr>
-                    <ul id="sortable" class="list-unstyled">
-                    <li class="ui-state-default">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="" />Take out the trash</label>
-                        </div>
-                    </li>
-                    <li class="ui-state-default">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="" />Buy bread</label>
-                        </div>
-                    </li>
-                    <li class="ui-state-default">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="" />Teach penguins to fly</label>
-                        </div>
-                    </li>
-                </ul>
-                <div class="todo-footer">
-                    <strong><span class="count-todos"></span></strong> Items Left
-                </div>
+          <div id="radioButtons">
+            <div class="btn-group topButtons" data-toggle="buttons">
+              <label class="btn btn-default">
+                <input type="radio" value="glyphicon glyphicon-home" name="section"><span class="glyphicon glyphicon-home" ></span></input>
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" value="glyphicon glyphicon-briefcase" name="section"><span class="glyphicon glyphicon-briefcase"></span></input>
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" value="glyphicon glyphicon-star" name="section" checked><span class="glyphicon glyphicon-star"></span></input>
+              </label>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="todolist">
-             <h1>Already Done</h1>
-                <ul id="done-items" class="list-unstyled">
-                    <li>Some item <button class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
 
-                </ul>
+            <div></div>
+
+            <div class="btn-group bottomButtons" data-toggle="buttons">
+              <label class="btn btn-danger">
+                <input type="radio"  value="rgb(209, 51, 51)" name="color">Urgent</input>
+              </label>
+              <label class="btn btn-warning">
+                <input type="radio" value="rgba(240, 141, 11, 0.98)" name="color">Later </input>
+              </label>
+              <label class="btn btn-default">
+                <input type="radio"value="" name="color" checked>Normal</input>
+              </label>
             </div>
+          </div>
+
+          <input type="text" class="form-control add-todo" id="targetinput" name="textInput" placeholder="Add todo"></input>
+
+
+
+          <hr>
+          <ul id="sortable" class="list-unstyled">
+
+          </ul>
+          <div class="todo-footer">
+            <strong><span class="count-todos"></span></strong> Items Left
+            <button id="checkAll" class="btn btn-success pull-right">Mark all as done</button>
+          </div>
         </div>
+      </div>
+      <div class="col-md-6">
+        <div class="todolist">
+          <h1>Already Done</h1>
+          <ul id="done-items" class="list-unstyled">
+            <li>Some item <button class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
+
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
 </body>
 </html>
